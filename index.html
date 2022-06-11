@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+    <!-- ======= ======= ======= head ======= ======= ======= -->
+	<head>
+	    <meta charset="utf-8">
+	    <title>Magic Eight Ball</title>
+
+        <!-- == styles == -->
+	    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+	</head>
+
+    <!-- ======= ======= ======= body ======= ======= ======= -->
+	<body>
+
+<div class="wrapper1">
+        <h1 align="center"> Welcome to the Magic Eight Ball </h1>
+
+
+<div class="wrapper">
+
+	<div id="playername">
+	  <label for="firstname">User name:</label><br>
+	  <input type="text" id="firstname" name="firstname"><br>
+	  <!-- <input type="submit" value="SUBMIT"> -->
+	</div>
+
+
+	<div id="playerquestion">
+			<label for="question">What is your question?</label><br>
+			<input type="text" id="question" name="question"><br>
+	</div>
+
+
+	<div id="buttonarea">
+		<button id="newpuzzle" class="buttons">LET'S BEGIN</button>
+
+	</div>
+
+	<!-- <span class="dot"></span> -->
+
+	</div>
+
+</div>
+
+<br>
+<br>
+
+
+<div class="ballwrapper">
+<div class="biginfobox" onload="hidden">
+	<!-- <p>This is where the info is stored</p> -->
+	<div class="output"><div id="littleinfobox"></div></div>
+	<!-- <button id="infoclick" onclick="showData()">Click Me</button> -->
+</div>
+</div>
+
+
+<br>
+<br>
+
+
+<div class="playareawrapper">
+
+	<div class="playarea">
+	  <button id="askagain" class="button" onclick="newQuestion()">ASK ANOTHER QUESTION?</button>
+		<button id="askagain2" class="button">These are your questions:</button>
+	</div>
+
+	<div class="showdata">
+		<p>Click here to show all the questions you've asked</p>
+	<button id="testclick" onclick="showQuestions()">Click Me</button>
+	</div>
+
+	<!-- In this DIV, I want to use the button to hide the button in DIV above, and at the same time output the ongoing User Name and Question data -->
+	<div class="testbutton">
+		<p>If you click this button it will hide the Ask Another Question button (you should do this if you are typing in a lot of questions because the box will overflow), then unhide, etc.)</p>
+	<button id="testclick" onclick="hideButton()">Click Me</button>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+		<!-- ====== ====== ===== scripts ===== ====== ===== -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+		</script>
+
+
+		<script type="text/javascript" src="script.js">
+
+			<!-- newpuzzle.addEventListener("click", logName, newQuestion);
+
+		document.write(userName); -->
+	 	<script language='javascript'>
+
+
+
+
+		var eightBallResponses = ["Don't count on it", "Odds are against it", "The dude thinks so", "All signs point to yes", "Ask again later", "Outlook is Hazy", "Definitely not"]
+
+		console.log(eightBallResponses);
+
+		// var userQuestion = ""
+		const yourQuestions = []
+		//console.log(yourQuestions)
+
+
+		function randomNumber(eightBallResponses) {
+		    return eightBallResponses[Math.floor(Math.random()*eightBallResponses.length)]
+		}
+
+		console.log(randomNumber(eightBallResponses));
+
+
+
+		function logName(userName) {
+		    var userName = document.getElementById("firstname").value;
+		    console.log(userName);
+
+				var userQuestion = document.getElementById("question").value
+				console.log(userQuestion)
+
+				//Why did this work here and not in a separate function I tried to create called LogQuestion?
+				var allQuestions = yourQuestions.push(document.getElementById("question").value);
+				console.log(yourQuestions)
+
+
+
+			if (userName.length > 0 && userQuestion.length > 0) {
+				document.write("Your userName is: " + userName + "<br/>")
+				document.write("Your question is: " + userQuestion + "<br/>")
+				document.write("Magic Eight Ball Says: " + randomNumber(eightBallResponses) + "<br/>")
+			} else if (userName.length === 0 && userQuestion.length > 0) {
+				document.write("Please enter a user name")
+			} else if (userQuestion.length === 0 && userName.length > 0) {
+				document.write("Please enter a question")
+			} else {
+				document.write("You didn't enter ANYTHING!")
+			}
+
+			if (userName === "Michael") {
+				document.write(userName + "? " + "Hey Michael! You invented this app! Way to go!")
+			}
+
+		}
+
+		newpuzzle.addEventListener("click", logName, newQuestion);
+
+
+	</script>
+
+
+		</body>
+	</html>
+
+
+<!--CODE DUMP - NOT IMPORTANT-->
+
+<!-- //Do another Div - it's invisible, do it with CSS. Div class results, e.g. Put everything in there - eight ball, answers, etc.
+In LogName, every time you do document.write, set value of div with JS (or jQuery). Set values, set div to be answer. Make
+it all visible. Then ask if they want to ask another question, that can be in the div. Button to ask another question, link back
+to original page to ask another question and save the username, perhaps? Create another function to make it invisible again, a variable
+that starts at 0 any every time function gets called increment variable by 1.
+
+Next up - can I fire two functions on one click? I.e. show all the data while also hiding the button?
+Can I make the text within the eight ball triangle float around? For that matter how can I move the text a little more? -->
+
+
+			<!-- // if (userName.length > 0 && userQuestion.length > 0) {
+			// 	document.write("Your userName is: " + userName + "<br/>")
+			// 	document.write(randomNumber(eightBallResponses) + "<br/>")
+			// 	document.write("Your question is: " + userQuestion.value)
+			// } else {
+			// 	document.write("You need to enter both a user name and a question to play this game")
+			// }
+
+			// 	var up = document.getElementById("playername");
+			// 	var down = document.getElementById("playerquestion")
+			// 	up.innerHTML = "click to copy"
+			//
+			// 	function copyStuff() {
+			// 		$(.playerquestion).clone().appendTo('playername');
+			// 		down.innerHTML = "Copied"
+			// }
+
+		// function logQuestion(userQuestion) {
+		// 		// var userQuestion = document.getElementById("question");
+		// 		var allQuestions = yourQuestions.push(document.getElementById("question").value);
+		// 		console.log(yourQuestions)
+		// }
+		// logQuestion()
+
+		// function showEightBall() {
+		//   var x = document.getElementById("myDIV");
+		//   if (x.style.display === "none") {
+		//     x.style.display = "block";
+		//   } else {
+		//     x.style.display = "none";
+		//   }
+		// }
+
+
+		<! <script language='jQuery'>
+		$('.testclick').click(function() {
+	      $('.playerquestion').css("opacity", "0.5");
+	  });
+		</script> -->
+
+
+
+
+
+		<!-- // document.write(userName.value + "<br/>")
+
+
+
+		// function logQuestion(userQuestion) {
+		// 	var userQuestion = document.getElementById("newquestion").value;
+		// 	console.log(userQuestion);
+		//
+		// 	if (userQuestion.length > 0) {
+		// 		document.write(userQuestion + "<br/>")
+		// 		// document.write(randomNumber(eightBallResponses) + "<br/>")
+		// 	} else {
+		// 		document.write("Please enter a question")
+		// 	}
+		// }
+
+		// newquestion.addEventListener("click", logQuestion);
+		// for (i = 0; i < eightBallResponses.length; i++) {
+		// document.write(eightBallResponses[i] + "<br/>")
+
+		// document.write(randomNumber(eightBallResponses)) -->
+
+		<!-- <div class="bracketarea">
+        	<a href="https://en.wikipedia.org/wiki/2012_Major_League_Baseball_season#Postseason" target="_blank"> -->
+
+				<!-- <img class="bracket2016" src="2012bracket.png" height=570 width=850></a> -->
+        <!-- </div> <p>But first check out the 2012 MLB Postseason!</p></a> -->
+
+				<!-- // var eightBallResponses = ["Don't count on it", "Odds are against it", "The dude thinks so", "All signs point to yes"]
+				//
+				// console.log(eightBallResponses);
+				//
+				//
+				// function randomNumber(eightBallResponses) {
+				//     return eightBallResponses[Math.floor(Math.random()*eightBallResponses.length)]
+				// 	// for (i = 0; i < eightBallResponses.length; i++) {
+				// 	// 	document.write(eightBallResponses[i] + "<br/>")
+				// 	// }
+				// }
+				//
+				// console.log(randomNumber(eightBallResponses));
+				//
+				//
+				// newpuzzle.addEventListener("click", logName);
+				//
+				// function logName() {
+				//     var userName = document.getElementById("firstname");
+				//     console.log(userName.value);
+				// }
+				// newpuzzle.addEventListener("click", logName);
+
+
+				// function logName() {
+				//     var userName = document.getElementById("firstname");
+				//     console.log(userName.value);
+				// 	document.write(userName.value + "<br/>");
+				// } -->
+
+				<!-- onclick="hideButton() -->
+
+
+				<!-- <div id="playername">
+				<form>
+				  <label for="firstname">First name:</label><br>
+				  <input type="text" id="firstname" name="firstname"><br>
+				  <input type="submit" value="SUBMIT">
+				</form>
+				</div> -->
+
+				<!-- <div>
+					<button id="newquestion" class="buttons">ENTER A Q</button>
+
+				</div> -->
+
+
+
+				        <!-- <button type="button" class="button2016">Click here for more info about the 2012 postseason</button>
+				        <br>
+
+						<div class="bracketarea">
+				        	<a href="https://en.wikipedia.org/wiki/2012_Major_League_Baseball_season#Postseason" target="_blank"><img class="bracket2016" src="2012bracket.png" height=570 width=850></a>
+				        </div> -->
+
+				        <!-- <p class="footer" align="center"><a href="file:///Users/draftamerica/Desktop/WDI%20FOLDER/Projects/SportsStats/index.html">Back to Home</a></p> -->
+
+
+
+<!-- What I want the program to do:
+-Show an image of the eight ball on the homescreen before they enter a name/question
+-Why does it go to a different page? How do I keep it on the same page?
+-Show their user name and answer their question in the eight ball itself
+-After a user enters a name/question and gets an answer, ask them if they want to ask another question
+-Track how many questions a user has asked
+-Can I store questions based on user names?
+-Alert the user if they ask a repeat question
+-Should any/all of my variables be global?
+-Is there such thing as putting too many conditions into one function?
+-Is it standard practice to write HTML and JS code in the same file? What about CSS?
+-How do you style things using document.write?

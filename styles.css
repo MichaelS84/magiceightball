@@ -1,0 +1,536 @@
+h1 {
+  color: black;
+  width: 500px;
+  height: 40px;
+  position: relative;
+  background-color: gray;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  -webkit-animation: rightThenLeft 2s linear;
+}
+
+@-webkit-keyframes rightThenLeft {
+  0%   {margin-right:40;}
+   50%  {margin-right:50%;}
+   100% {margin-right:0;}
+}
+
+body {
+  border-style: ridge;
+  border-color: black;
+  background-color: white;
+}
+
+.wrapper1 {
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  width: 500px;
+  /* max-width: 100%; */
+  width: 700px;
+  margin-left: 50px;
+  border-style: ridge;
+  border-color: rgb(101, 76, 176);
+  border-radius: 5px;
+}
+
+#biginfobox {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.biginfobox:hover {
+  background-color: gray;
+  opacity: 0.9;
+}
+
+#firstname {
+    padding: 10px;
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+#question {
+    padding: 10px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#playername {
+    font-size: 34px;
+    font-family: cursive;
+    color: blue;
+    padding: 10px;
+    text-align: center;
+    height: 150px;
+    background-color: rgb(150, 167, 129);
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: rgb(101, 76, 176);
+}
+
+#playerquestion {
+    font-size: 34px;
+    font-family: cursive;
+    color: black;
+    padding: 10px;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    background-color: grey;
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: rgb(401, 176, 176);
+}
+
+#newpuzzle {
+    color: red;
+    padding: 10px;
+    background-color: yellow;
+    text-align: center;
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: rgb(401, 176, 176);
+}
+
+#buttonarea {
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    background-color: beige;
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: rgb(401, 176, 176);
+}
+
+.playareawrapper {
+  border-color: red;
+  margin: auto;
+  width: 600px;
+  background-color: brown;
+  /* display: flex; */
+}
+
+.playarea {
+  height: 100px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: ridge;
+  border-color: rgb(101, 76, 176);
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  background-color: green;
+}
+
+.showdata {
+    height: 100px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: ridge;
+    border-color: rgb(101, 76, 176);
+    border-radius: 5px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(61, 186, 146);
+    position: relative;
+    margin-bottom: 1px;
+  }
+
+.testbutton {
+  height: 100px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: ridge;
+  border-color: rgb(101, 76, 176);
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  background-color: magenta;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#askagain {
+  color: red;
+  padding: 10px;
+  position: relative;
+  margin-top: 30px;
+  background-color: yellow;
+  text-align: center;
+  border-style: ridge;
+  border-radius: 5px;
+  border-color: rgb(401, 176, 176);
+}
+
+#askagain2 {
+  color: blue;
+  padding: 10px;
+  position: relative;
+  margin-top: 30px;
+  background-color: gold;
+  text-align: center;
+  border-style: ridge;
+  border-radius: 5px;
+  border-color: rgb(401, 176, 176);
+  overflow: visible;
+  overflow-wrap: break-word;
+}
+
+
+#testclick {
+  color: red;
+  padding: 10px;
+  position: relative;
+  margin-top: 10px;
+  background-color: yellow;
+  text-align: center;
+  border-style: ridge;
+  border-radius: 5px;
+  border-color: rgb(401, 176, 176);
+}
+
+.biginfobox {
+  height: 300px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  background-color: pink;
+  text-align: center;
+  background: linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,0));
+  animation: rotating 6s infinite linear;
+  /* -webkit-transition: background-color 5s ease-out; */
+  border-radius: 50%;
+}
+
+/*HOW DO I GET THE EIGHT BALL RESPONSES TO CONSTANTLY BE FLOATING WITHIN THE DIV? */
+#littleinfobox {
+  color: white;
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  /* line-height: 1px; */
+  padding: 67px;
+  /* margin-left: -195px; */
+  top: 5px;
+  width: 60px;
+  font-size: 12px;
+  font-family: sans-serif;
+  line-height: 12px;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-10%);
+  left: -85px;
+  top: 60%;
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(25, 51px); }
+    50%  { transform: translate(0, 5px); }
+    100%   { transform: translate(25, 10px); }
+  /* 0% { transform: translate(20px, 40px); }
+  5% { transform: translate(120px, 130px); }
+  10% { transform: translate(30px, 40px); }
+  40% { transform: translate(130px, 130px); }
+  70% { transform: translate(20px, 20px); }
+  100% { transform: translate(110px, 80px);} */
+  /* 10% { transform: translateY(45px, -30px;)} */
+  /* 10% { transform: translate(-210px, 100px);} */
+  /* 20%  { transform: translate(-240px, 20px); }
+  30%   { transform: translate(-100px, 10px); } */
+}
+  /* top: 50%;
+  left: 50%; */
+
+#littleinfobox p:hover {
+  background-color: black;
+}
+
+.output {
+  /* TO MAKE A TRIANGLE; */
+  position: relative;
+  text-align: right;
+  left: 50px;
+  height: 75px;
+  top: 10px;
+  width: 0px;
+  border-bottom: 100px solid blue;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+}
+
+.ballwrapper {
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+/* CODE DUMP - IGNORE*/
+
+
+/* .dot {
+  height: 50px;
+  width: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+} */
+
+/* div.scoreboard {
+    position: relative;
+    top: -20px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: silver;
+    display: block;
+    width: 910px;
+}
+div.scoreboard button {
+    background-color: inherit;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    width: 300px;
+    padding: 7px 9px;
+    transition: 0.3s;
+}
+.hello {
+    color: green;
+}
+/* Style the tab */
+/* div.tab {
+    position: relative;
+    top: -20px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: silver;
+    display: block;
+    width: 910px;
+}
+
+/* Style the buttons inside the tab */
+/* div.tab button {
+    background-color: inherit;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 43.8px;
+    transition: 0.3s;
+    float: left;
+} */
+
+/* Change background color of buttons on hover */
+/* div.tab button:hover {
+    background-color: #ddd;
+} */
+
+/* Create an active/current tablink class */
+/* div.tab button.active {
+    background-color: #ccc;
+} */
+
+/* Style the tab content */
+/* .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+} */
+/* .playbox {
+    position: relative;
+    top: 50px;
+    background-color: green;
+    display: block;
+    width: 912px;
+} */
+/* .angels {
+    height: 50px;
+    width: 100px;
+    left: 20px;
+    position: relative;
+} */
+/* .redsox {
+    height: 50px;
+    width: 100px;
+    top: 8px;
+    right: 20px;
+    position: relative;
+    right: -625px;
+} */
+/* .roadrecord {
+    position: relative;
+    font-size: 14px;
+    left: 50px;
+}
+.homerecord {
+    position: relative;
+    font-size: 14px;
+    right: -760px;
+    top: -30px;
+}
+.finalscore {
+    position: relative;
+    font-size: 22px;
+    left: 350px;
+    top: -130px;
+    font-weight: bold;
+    font-style: verdana; */
+
+
+
+
+/* Modal Content/Box */
+/* .modal-content {
+    background-color: yellow;
+    color: blue;
+    text-shadow: 0.5px 0.5px green;
+    font-size: 20px;
+    margin: 15% auto; /* 15% from the top and centered
+    padding: 20px;
+    opacity: 0.9;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+/* .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+} */
+
+/* .close:hover,
+.close:focus {
+    color: black;
+    text-decoration: yellow;
+    cursor: pointer;
+} */
+
+/* // $('.button2016').click(function() {
+//     $('.bracketarea').css("visibility", "visible");
+// });
+//
+// $('.giantslogo1').hover(function() {
+//     $('.giantslogo1').css("opacity", "1");
+//     $('.boxes').css("opacity", "0.1");
+//     $('.giantslogo2').css("opacity", "0.1");
+//     $('.redsoxlogo').css("opacity", "0.1");
+//     $('.royalslogo').css("opacity", "0.1");
+//     $('.cubslogo').css("opacity", "0.1")
+// });
+//
+// $('.giantslogo1').mouseleave(function() {
+//     $('.boxes').css("opacity", "0.8");
+//     $('.giantslogo1').css("opacity", "0.8");
+//     $('.giantslogo2').css("opacity", "0.8");
+//     $('.redsoxlogo').css("opacity", "0.8");
+//     $('.royalslogo').css("opacity", "0.8");
+//     $('.cubslogo').css("opacity", "0.8")
+// });
+//
+// $('.giantslogo2').hover(function() {
+//     $('.giantslogo2').css("opacity", "1");
+//     $('.boxes').css("opacity", "0.1");
+//     $('.giantslogo1').css("opacity", "0.1");
+//     $('.redsoxlogo').css("opacity", "0.1");
+//     $('.royalslogo').css("opacity", "0.1");
+//     $('.cubslogo').css("opacity", "0.1")
+// });
+//
+// $('.giantslogo2').mouseleave(function() {
+//     $('.boxes').css("opacity", "0.8");
+//     $('.giantslogo1').css("opacity", "0.8");
+//     $('.giantslogo2').css("opacity", "0.8");
+//     $('.redsoxlogo').css("opacity", "0.8");
+//     $('.royalslogo').css("opacity", "0.8");
+//     $('.cubslogo').css("opacity", "0.8")
+// });
+//
+// $('.redsoxlogo').hover(function() {
+//     $('.redsoxlogo').css("opacity", "1");
+//     $('.boxes').css("opacity", "0.1");
+//     $('.giantslogo1').css("opacity", "0.1");
+//     $('.giantslogo2').css("opacity", "0.1");
+//     $('.royalslogo').css("opacity", "0.1");
+//     $('.cubslogo').css("opacity", "0.1")
+// });
+//
+// $('.redsoxlogo').mouseleave(function() {
+//     $('.boxes').css("opacity", "0.8");
+//     $('.redsoxlogo').css("opacity", "0.8");
+//     $('.giantslogo1').css("opacity", "0.8");
+//     $('.giantslogo2').css("opacity", "0.8");
+//     $('.redsoxlogo').css("opacity", "0.8");
+//     $('.royalslogo').css("opacity", "0.8");
+//     $('.cubslogo').css("opacity", "0.8")
+// });
+//
+// $('.royalslogo').hover(function() {
+//     $('.royalslogo').css("opacity", "1");
+//     $('.boxes').css("opacity", "0.1");
+//     $('.giantslogo1').css("opacity", "0.1");
+//     $('.giantslogo2').css("opacity", "0.1");
+//     $('.redsoxlogo').css("opacity", "0.1");
+//     $('.cubslogo').css("opacity", "0.1")
+// });
+//
+// $('.royalslogo').mouseleave(function() {
+//     $('.boxes').css("opacity", "0.8");
+//     $('.royalslogo').css("opacity", "0.8");
+//     $('.giantslogo1').css("opacity", "0.8");
+//     $('.giantslogo2').css("opacity", "0.8");
+//     $('.redsoxlogo').css("opacity", "0.8");
+//     $('.royalslogo').css("opacity", "0.8");
+//     $('.cubslogo').css("opacity", "0.8")
+// });
+//
+// $('.cubslogo').hover(function() {
+//     $('.cubslogo').css("opacity", "1");
+//     $('.boxes').css("opacity", "0.1");
+//     $('.giantslogo1').css("opacity", "0.1");
+//     $('.giantslogo2').css("opacity", "0.1");
+//     $('.redsoxlogo').css("opacity", "0.1");
+//     $('.royalslogo').css("opacity", "0.1")
+// });
+//
+// $('.cubslogo').mouseleave(function() {
+//     $('.boxes').css("opacity", "0.8");
+//     $('.cubslogo').css("opacity", "0.8");
+//     $('.giantslogo1').css("opacity", "0.8");
+//     $('.giantslogo2').css("opacity", "0.8");
+//     $('.redsoxlogo').css("opacity", "0.8");
+//     $('.royalslogo').css("opacity", "0.8");
+//     $('.cubslogo').css("opacity", "0.8")
+// }); */
