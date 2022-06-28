@@ -113,7 +113,7 @@ body {
   border-color: red;
   margin: auto;
   width: 600px;
-  background-color: brown;
+  background-color: #E2BD19;
   /* display: flex; */
 }
 
@@ -128,6 +128,7 @@ body {
   margin: auto;
   text-align: center;
   background-color: green;
+  overflow: scroll;
 }
 
 .showdata {
@@ -174,6 +175,8 @@ body {
   border-style: ridge;
   border-radius: 5px;
   border-color: rgb(401, 176, 176);
+  overflow: visible;
+  /* overflow-wrap: scroll; */
 }
 
 #askagain2 {
@@ -187,7 +190,7 @@ body {
   border-radius: 5px;
   border-color: rgb(401, 176, 176);
   overflow: visible;
-  overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
 }
 
 
@@ -279,6 +282,15 @@ body {
 
 .ballwrapper {
   background-color: white;
+}
+#playareaheadline {
+  font-weight: bold;
+  font-size: 25px;
+  border-style: dotted;
+  text-align: center;
+  background-color: orange;
+  width: 600px;
+  margin: auto;
 }
 
 
